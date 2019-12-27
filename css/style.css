@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carta {
+  width: calc(100% / 4 - 20px);
+  height: calc(100% / 4 - 20px);
+  margin: 10px;
+  cursor: pointer;
+}
+
+.unclickable {
+  z-index: -1;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.direction1 {
+  flex-direction: column;
+}
+.direction2 {
+  flex-direction: column-reverse;
+}
+.direction3 {
+  flex-direction: row-reverse;
+}
+
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.pink {
+  background-color: pink;
+}
+.purple {
+  background-color: purple;
+}
+.lightgreen {
+  background-color: lightgreen;
+}
+.beige {
+  background-color: beige;
+}
+
+.order1 {
+  order: 1;
+}
+.order2 {
+  order: 2;
+}
+.order3 {
+  order: 3;
+}
+.order4 {
+  order: 4;
+}
+.order5 {
+  order: 5;
+}
+.order5 {
+  order: 5;
+}
+.order6 {
+  order: 6;
+}
+.order7 {
+  order: 7;
+}
+.order8 {
+  order: 8;
+}
+.order9 {
+  order: 9;
+}
+.order10 {
+  order: 10;
+}
+.order11 {
+  order: 11;
+}
+.order12 {
+  order: 12;
+}
+.order13 {
+  order: 13;
+}
+.order14 {
+  order: 14;
+}
+.order15 {
+  order: 15;
+}
+.order16 {
+  order: 16;
+}
