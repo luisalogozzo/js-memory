@@ -1,13 +1,14 @@
 var PrimaScelta = '';
+var CoppieTrovate = 0;
 
 document.getElementById('gioca').addEventListener('click',
 function() {
-Math.floor(Math.random() * 16 + 1);
-document.getElementById('carta1').classList.add('order' + Math.floor(Math.random() * 16 + 1));
 for (var i = 1; i <= 16; i++) {
   document.getElementById('carta' + i).classList.add('order' + Math.floor(Math.random() * 16 + 1));
 }
-document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 4));
+document.getElementById('container').classList.add('direction' + Math.floor(Math.random() * 2));
+document.getElementById('carta1').classList.add('container-animation');
+document.getElementById('carta2').classList.add('container-animation');
 }
 );
 
@@ -20,10 +21,14 @@ function() {
     PrimaScelta = 'carta1';
   } else {
     if (PrimaScelta == 'carta2') {
+      alert('Bravo, hai trovato una coppia!');
+      CoppieTrovate += 1;
       setTimeout(function(){
-      alert('hai vinto');
       document.getElementById(PrimaScelta).classList.add('hidden');
       document.getElementById('carta1').classList.add('hidden');
+      if (CoppieTrovate == 2) {
+        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+      }
 }, 2100);
     } else {
       setTimeout(function(){
@@ -48,9 +53,13 @@ function() {
   } else {
     if (PrimaScelta == 'carta1') {
       setTimeout(function(){
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+      CoppieTrovate += 1;
       document.getElementById(PrimaScelta).classList.add('hidden');
       document.getElementById('carta2').classList.add('hidden');
+      if (CoppieTrovate == 2) {
+        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+      }
 }, 2100);
     } else {
       setTimeout(function(){
@@ -75,10 +84,14 @@ function() {
   } else {
     if (PrimaScelta == 'carta4') {
       setTimeout(function(){
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+      CoppieTrovate += 1;
       document.getElementById(PrimaScelta).classList.add('hidden');
       document.getElementById('carta3').classList.add('hidden');
-}, 2100);
+      if (CoppieTrovate == 2) {
+        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+      }
+    }, 2100);
     } else {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
@@ -101,10 +114,14 @@ function() {
   } else {
     if (PrimaScelta == 'carta3') {
       setTimeout(function(){
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+      CoppieTrovate += 1;
       document.getElementById(PrimaScelta).classList.add('hidden');
       document.getElementById('carta4').classList.add('hidden');
-}, 2100);
+      if (CoppieTrovate == 2) {
+        setTimeout(function(){alert('Bravo, hai completato il gioco!');}, 1500);
+      }
+    }, 2100);
     } else {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
@@ -124,7 +141,8 @@ function() {
     PrimaScelta = 'blue';
   } else {
     if (PrimaScelta == 'blue') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -137,7 +155,8 @@ function() {
     PrimaScelta = 'blue';
   } else {
     if (PrimaScelta == 'blue') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -150,7 +169,8 @@ function() {
     PrimaScelta = 'green';
   } else {
     if (PrimaScelta == 'green') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -163,7 +183,8 @@ function() {
     PrimaScelta = 'green';
   } else {
     if (PrimaScelta == 'green') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -176,7 +197,8 @@ function() {
     PrimaScelta = 'pink';
   } else {
     if (PrimaScelta == 'pink') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -189,7 +211,8 @@ function() {
     PrimaScelta = 'pink';
   } else {
     if (PrimaScelta == 'pink') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -202,7 +225,8 @@ function() {
     PrimaScelta = 'purple';
   } else {
     if (PrimaScelta == 'purple') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -215,7 +239,8 @@ function() {
     PrimaScelta = 'purple';
   } else {
     if (PrimaScelta == 'purple') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -228,7 +253,8 @@ function() {
     PrimaScelta = 'lightgreen';
   } else {
     if (PrimaScelta == 'lightgreen') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -241,7 +267,8 @@ function() {
     PrimaScelta = 'lightgreen';
   } else {
     if (PrimaScelta == 'lightgreen') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -254,7 +281,8 @@ function() {
     PrimaScelta = 'beige';
   } else {
     if (PrimaScelta == 'beige') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }
@@ -267,7 +295,8 @@ function() {
     PrimaScelta = 'beige';
   } else {
     if (PrimaScelta == 'beige') {
-      alert('hai vinto');
+      alert('Bravo, hai trovato una coppia!');
+CoppieTrovate += 1;
     } else {
       alert('riprova');
     }

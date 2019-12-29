@@ -8,6 +8,10 @@ body {
   min-width: 296px;
 }
 
+#gioca {
+  font-size: 40px;
+}
+
 .carta {
   border: 1px solid #1E7CCE;
   border-radius: 5px;
@@ -25,6 +29,19 @@ body {
 .rotate {
   transform: rotateY(180deg);
 }
+
+#carta1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#carta2 {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
+
+
 
 .carta.python {
   background-image: url(../img/Python.png);
@@ -52,6 +69,7 @@ body {
 }
 
 #container {
+  position: relative;
   width: 592px;
   margin: 0 auto;
   display: flex;
@@ -59,6 +77,39 @@ body {
   justify-content: center;
 }
 
+.container-animation {
+  animation-name: shuffle;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes shuffle {
+  0% {
+  }
+  50% {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+  }
+}
+
+/* @keyframes shuffle {
+  0% {
+    transform: rotate(0deg) scale(1) skew(0deg);
+  }
+  45% {
+    transform: rotate(670deg) scale(0.05) skew(10deg);
+  }
+  55% {
+    transform: rotate(720deg) scale(0.05) skew(10deg);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) skew(0deg);
+  }
+} */
 
 
 .unclickable {
@@ -71,12 +122,6 @@ body {
 }
 
 .direction1 {
-  flex-direction: column;
-}
-.direction2 {
-  flex-direction: column-reverse;
-}
-.direction3 {
   flex-direction: row-reverse;
 }
 
