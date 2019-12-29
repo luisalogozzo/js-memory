@@ -4,20 +4,62 @@
   margin: 0;
 }
 
-#container {
-  width: 70%;
-  height: 100vh;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
+body {
+  min-width: 296px;
 }
 
 .carta {
-  width: calc(100% / 4 - 20px);
-  height: calc(100% / 4 - 20px);
+  border: 1px solid #1E7CCE;
+  border-radius: 5px;
+  width: 128px;
+  height: 174px;
   margin: 10px;
   cursor: pointer;
+  background-image: url(../img/backface.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  perspective: 1000px;
+  transition: transform 2s;
 }
+.rotate {
+  transform: rotateY(180deg);
+}
+
+.carta.python {
+  background-image: url(../img/Python.png);
+}
+.carta.java {
+  background-image: url(../img/java.png);
+}
+.carta.php {
+  background-image: url(../img/php.png);
+}
+.carta.laravel {
+  background-image: url(../img/laravel.png);
+}
+.carta.html5 {
+  background-image: url(../img/html5.png);
+}
+.carta.css3 {
+  background-image: url(../img/css3.png);
+}
+.carta.csharp {
+  background-image: url(../img/csharp.jpg);
+}
+.carta.bootstrap {
+  background-image: url(../img/bootstrap.png);
+}
+
+#container {
+  width: 592px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 
 .unclickable {
   z-index: -1;
@@ -36,33 +78,6 @@
 }
 .direction3 {
   flex-direction: row-reverse;
-}
-
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: yellow;
-}
-.blue {
-  background-color: blue;
-}
-.green {
-  background-color: green;
-}
-.pink {
-  background-color: pink;
-}
-.purple {
-  background-color: purple;
-}
-.lightgreen {
-  background-color: lightgreen;
-}
-.beige {
-  background-color: beige;
 }
 
 .order1 {
@@ -115,4 +130,11 @@
 }
 .order16 {
   order: 16;
+}
+
+
+@media screen and (min-width:297px) and (max-width:592px) {
+  #container {
+    width: 296px;
+  }
 }

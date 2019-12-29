@@ -14,58 +14,108 @@ document.getElementById('container').classList.add('direction' + Math.floor(Math
 document.getElementById('carta1').addEventListener('click',
 function() {
   document.getElementById('carta1').classList.add('unclickable');
+  setTimeout(function(){document.getElementById('carta1').classList.add('python')}, 600);
+  document.getElementById('carta1').classList.add('rotate');
   if (PrimaScelta == '') {
-    PrimaScelta = 'red';
+    PrimaScelta = 'carta1';
   } else {
-    if (PrimaScelta == 'red') {
+    if (PrimaScelta == 'carta2') {
+      setTimeout(function(){
       alert('hai vinto');
+      document.getElementById(PrimaScelta).classList.add('hidden');
       document.getElementById('carta1').classList.add('hidden');
-      document.getElementById('carta2').classList.add('hidden');
+}, 2100);
     } else {
-      alert('riprova');
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
+      document.getElementById('carta1').classList.remove('unclickable', 'rotate');
+    }, 2100);
+      setTimeout(function(){
+        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById('carta1').className = 'carta';
+    }, 2700);
     }
-  }
+    setTimeout(function(){PrimaScelta = '';}, 2700);}
 });
+
 document.getElementById('carta2').addEventListener('click',
 function() {
   document.getElementById('carta2').classList.add('unclickable');
+  setTimeout(function(){document.getElementById('carta2').classList.add('python')}, 600);
+  document.getElementById('carta2').classList.add('rotate');
   if (PrimaScelta == '') {
-    PrimaScelta = 'red';
+    PrimaScelta = 'carta2';
   } else {
-    if (PrimaScelta == 'red') {
+    if (PrimaScelta == 'carta1') {
+      setTimeout(function(){
       alert('hai vinto');
-      document.getElementById('carta1').classList.add('hidden');
+      document.getElementById(PrimaScelta).classList.add('hidden');
       document.getElementById('carta2').classList.add('hidden');
+}, 2100);
     } else {
-      alert('riprova');
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
+      document.getElementById('carta2').classList.remove('unclickable', 'rotate');
+    }, 2100);
+      setTimeout(function(){
+        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById('carta2').className = 'carta';
+    }, 2700);
     }
-  }
+    setTimeout(function(){PrimaScelta = '';}, 2700);}
 });
+
 document.getElementById('carta3').addEventListener('click',
 function() {
   document.getElementById('carta3').classList.add('unclickable');
+  setTimeout(function(){document.getElementById('carta3').classList.add('java')}, 600);
+  document.getElementById('carta3').classList.add('rotate');
   if (PrimaScelta == '') {
-    PrimaScelta = 'yellow';
+    PrimaScelta = 'carta3';
   } else {
-    if (PrimaScelta == 'yellow') {
+    if (PrimaScelta == 'carta4') {
+      setTimeout(function(){
       alert('hai vinto');
+      document.getElementById(PrimaScelta).classList.add('hidden');
+      document.getElementById('carta3').classList.add('hidden');
+}, 2100);
     } else {
-      alert('riprova');
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
+      document.getElementById('carta3').classList.remove('unclickable', 'rotate');
+    }, 2100);
+      setTimeout(function(){
+        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById('carta3').className = 'carta';
+    }, 2700);
     }
-  }
+    setTimeout(function(){PrimaScelta = '';}, 2700);}
 });
 document.getElementById('carta4').addEventListener('click',
 function() {
   document.getElementById('carta4').classList.add('unclickable');
+  setTimeout(function(){document.getElementById('carta4').classList.add('java')}, 600);
+  document.getElementById('carta4').classList.add('rotate');
   if (PrimaScelta == '') {
-    PrimaScelta = 'yellow';
+    PrimaScelta = 'carta4';
   } else {
-    if (PrimaScelta == 'yellow') {
+    if (PrimaScelta == 'carta3') {
+      setTimeout(function(){
       alert('hai vinto');
+      document.getElementById(PrimaScelta).classList.add('hidden');
+      document.getElementById('carta4').classList.add('hidden');
+}, 2100);
     } else {
-      alert('riprova');
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.remove('unclickable', 'rotate');
+      document.getElementById('carta4').classList.remove('unclickable', 'rotate');
+    }, 2100);
+      setTimeout(function(){
+        document.getElementById(PrimaScelta).className = 'carta';
+        document.getElementById('carta4').className = 'carta';
+    }, 2700);
     }
-  }
+    setTimeout(function(){PrimaScelta = '';}, 2700);}
 });
 document.getElementById('carta5').addEventListener('click',
 function() {
