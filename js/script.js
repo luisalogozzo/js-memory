@@ -1,6 +1,7 @@
 var PrimaScelta = '';
 var SecondaScelta = '';
 var CoppieTrovate = 0;
+var difficolta = 13400;
 
 document.getElementById('carta1').addEventListener('click',
 function() {
@@ -16,12 +17,11 @@ function() {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
       document.getElementById('carta1').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -29,20 +29,19 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
   document.getElementById('overlay').classList.add('display-none');
   document.getElementById('transparent-overlay').classList.remove('zindex99');
-  }, 2500);        }
+}, 2000);        }
       }, 2100);
     }
     else {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
@@ -62,12 +61,11 @@ function() {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
       document.getElementById('carta2').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -75,20 +73,19 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
     document.getElementById('overlay').classList.add('display-none');
     document.getElementById('transparent-overlay').classList.remove('zindex99');
-    }, 2500);}
+    }, 2000);}
       }, 2100);
     }
     else {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
@@ -107,12 +104,11 @@ function() {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
       document.getElementById('carta3').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -120,20 +116,19 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
           document.getElementById('overlay').classList.add('display-none');
           document.getElementById('transparent-overlay').classList.remove('zindex99');
-          }, 2500);        }
+          }, 2000);        }
       }, 2100);
     }
     else {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
@@ -153,12 +148,11 @@ function() {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
       document.getElementById('carta4').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -166,12 +160,11 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
             document.getElementById('overlay').classList.add('display-none');
             document.getElementById('transparent-overlay').classList.remove('zindex99');
-            }, 2500);
+            }, 2000);
         }
       }, 2100);
     }
@@ -179,8 +172,8 @@ function() {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
@@ -199,12 +192,11 @@ function() {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
       document.getElementById('carta5').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -212,20 +204,19 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
   document.getElementById('overlay').classList.add('display-none');
   document.getElementById('transparent-overlay').classList.remove('zindex99');
-  }, 2500);        }
+  }, 2000);        }
       }, 2100);
     }
     else {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
@@ -245,12 +236,11 @@ function() {
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
       document.getElementById('carta6').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -258,45 +248,43 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
   document.getElementById('overlay').classList.add('display-none');
   document.getElementById('transparent-overlay').classList.remove('zindex99');
-  }, 2500);        }
+  }, 2000);        }
       }, 2100);
     }
     else {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
 });
 document.getElementById('carta7').addEventListener('click',
 function() {
-  document.getElementById('carta1').classList.add('unclickable', 'rotate');
-  setTimeout(function(){document.getElementById('carta1').classList.add('python')}, 600);
+  document.getElementById('carta7').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta7').classList.add('laravel')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'carta1';
+    PrimaScelta = 'carta7';
   }
   else {
-    SecondaScelta = 'carta1';
-        setTimeout(function(){document.getElementById('container').classList.add('zindexauto');}, 2700);
-    if (PrimaScelta == 'carta2') {
+    SecondaScelta = 'carta7';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta8') {
       CoppieTrovate += 1;
       setTimeout(function(){
       document.getElementById(PrimaScelta).classList.add('transparent');
-      document.getElementById('carta1').classList.add('transparent');
-        if (CoppieTrovate == 3) {
+      document.getElementById('carta7').classList.add('transparent');
+        if (CoppieTrovate == 8) {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-            document.getElementById('ok').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
           }, 1500);
         }
         else {
@@ -304,133 +292,416 @@ function() {
           setTimeout(function(){
             document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
             document.getElementById('overlay').classList.remove('display-none');
-            document.getElementById('gioca').classList.add('display-none');
-          }, 1000);
+                      }, 1000);
           setTimeout(function(){
   document.getElementById('overlay').classList.add('display-none');
   document.getElementById('transparent-overlay').classList.remove('zindex99');
-  }, 2500);        }
+  }, 2000);        }
       }, 2100);
     }
     else {
       setTimeout(function(){
         document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
         document.getElementById('overlay').classList.remove('display-none');
-        document.getElementById('gioca').classList.add('display-none');
-        document.getElementById('ok').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
+    }
+  }
+});
+document.getElementById('carta8').addEventListener('click',
+function() {
+  document.getElementById('carta8').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta8').classList.add('laravel')}, 600);
+  if (PrimaScelta == '') {
+    PrimaScelta = 'carta8';
+  }
+  else {
+    SecondaScelta = 'carta8';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta7') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta8').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
       }, 2700);
     }
   }
 });
 document.getElementById('carta9').addEventListener('click',
 function() {
-  document.getElementById('carta9').classList.add('unclickable');
+  document.getElementById('carta9').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta9').classList.add('html5')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'pink';
-  } else {
-    if (PrimaScelta == 'pink') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta9';
+  }
+  else {
+    SecondaScelta = 'carta9';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta10') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta9').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta10').addEventListener('click',
 function() {
-  document.getElementById('carta10').classList.add('unclickable');
+  document.getElementById('carta10').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta10').classList.add('html5')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'pink';
-  } else {
-    if (PrimaScelta == 'pink') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta10';
+  }
+  else {
+    SecondaScelta = 'carta10';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta9') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta10').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta11').addEventListener('click',
 function() {
-  document.getElementById('carta11').classList.add('unclickable');
+  document.getElementById('carta11').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta11').classList.add('css3')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'purple';
-  } else {
-    if (PrimaScelta == 'purple') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta11';
+  }
+  else {
+    SecondaScelta = 'carta11';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta12') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta11').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta12').addEventListener('click',
 function() {
-  document.getElementById('carta12').classList.add('unclickable');
+  document.getElementById('carta12').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta12').classList.add('css3')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'purple';
-  } else {
-    if (PrimaScelta == 'purple') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta12';
+  }
+  else {
+    SecondaScelta = 'carta12';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta11') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta12').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta13').addEventListener('click',
 function() {
-  document.getElementById('carta13').classList.add('unclickable');
+  document.getElementById('carta13').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta13').classList.add('csharp')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'lightgreen';
-  } else {
-    if (PrimaScelta == 'lightgreen') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta13';
+  }
+  else {
+    SecondaScelta = 'carta13';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta14') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta13').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta14').addEventListener('click',
 function() {
-  document.getElementById('carta14').classList.add('unclickable');
+  document.getElementById('carta14').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta14').classList.add('csharp')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'lightgreen';
-  } else {
-    if (PrimaScelta == 'lightgreen') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta14';
+  }
+  else {
+    SecondaScelta = 'carta14';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta13') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta14').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta15').addEventListener('click',
 function() {
-  document.getElementById('carta15').classList.add('unclickable');
+  document.getElementById('carta15').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta15').classList.add('bootstrap')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'beige';
-  } else {
-    if (PrimaScelta == 'beige') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta15';
+  }
+  else {
+    SecondaScelta = 'carta15';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta16') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta15').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
 document.getElementById('carta16').addEventListener('click',
 function() {
-  document.getElementById('carta16').classList.add('unclickable');
+  document.getElementById('carta16').classList.add('unclickable', 'rotate');
+  setTimeout(function(){document.getElementById('carta16').classList.add('bootstrap')}, 600);
   if (PrimaScelta == '') {
-    PrimaScelta = 'beige';
-  } else {
-    if (PrimaScelta == 'beige') {
-      alert('Bravo, hai trovato una coppia!');
-CoppieTrovate += 1;
-    } else {
-      alert('riprova');
+    PrimaScelta = 'carta16';
+  }
+  else {
+    SecondaScelta = 'carta16';
+        document.getElementById('transparent-overlay').classList.add('zindex99');
+      if (PrimaScelta == 'carta15') {
+      CoppieTrovate += 1;
+      setTimeout(function(){
+      document.getElementById(PrimaScelta).classList.add('transparent');
+      document.getElementById('carta16').classList.add('transparent');
+        if (CoppieTrovate == 8) {
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Hai completato il gioco!!';
+            document.getElementById('overlay').classList.remove('display-none');
+                        document.getElementById('ok').classList.remove('display-none');
+          }, 1500);
+        }
+        else {
+          setTimeout(function(){PrimaScelta = '';}, 2200);
+          setTimeout(function(){
+            document.getElementById('messaggio').innerHTML = 'Bravo, hai trovato una coppia!';
+            document.getElementById('overlay').classList.remove('display-none');
+                      }, 1000);
+          setTimeout(function(){
+  document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, 2000);        }
+      }, 2100);
+    }
+    else {
+      setTimeout(function(){
+        document.getElementById('messaggio').innerHTML = 'hai sbagliato devi ricominciare :)';
+        document.getElementById('overlay').classList.remove('display-none');
+                document.getElementById('ok').classList.remove('display-none');
+        document.getElementById('scopri').classList.remove('display-none');
+      }, 2700);
     }
   }
 });
@@ -438,7 +709,10 @@ CoppieTrovate += 1;
 // Gioca
 document.getElementById('gioca').addEventListener('click',
 function() {
+  document.getElementById('gioca').classList.add('display-none');
+  document.getElementById('difficolta').classList.add('display-none');
   document.getElementById('overlay').classList.add('display-none');
+  document.getElementById('transparent-overlay').classList.add('zindex99');
   setTimeout(function(){
     document.getElementById('carta16').classList.add('container-animation');
   }, 100 );
@@ -564,7 +838,7 @@ function() {
     for (var i = 1; i <= 16; i++) {
       document.getElementById('carta' + i).classList.remove('unclickable', 'rotate');
     }
-  }, 11400 );
+  }, difficolta );
   setTimeout(function(){
     document.getElementById('carta1').classList.remove('python');
     document.getElementById('carta2').classList.remove('python');
@@ -582,13 +856,14 @@ function() {
     document.getElementById('carta14').classList.remove('csharp');
     document.getElementById('carta15').classList.remove('bootstrap');
     document.getElementById('carta16').classList.remove('bootstrap');
-    document.getElementById('container').classList.add('zindexauto');
-  }, 12000 );
+    document.getElementById('transparent-overlay').classList.remove('zindex99');
+  }, difficolta + 600 );
 });
 // OK
 
 document.getElementById('ok').addEventListener('click',
   function() {
+    document.getElementById('scopri').classList.add('display-none');
     document.getElementById('transparent-overlay').classList.remove('zindex99');
     for (var i = 1; i <= 16; i++) {
       document.getElementById('carta' + i).classList.remove("transparent", 'unclickable', 'rotate' );
@@ -608,8 +883,62 @@ document.getElementById('ok').addEventListener('click',
       CoppieTrovate = 0;
       document.getElementById('container').className = "container";
       document.getElementById('messaggio').innerHTML = "Benvenuto a Memory, sei pronto?";
+      document.getElementById('difficolta').classList.remove('display-none');
       document.getElementById('gioca').classList.remove('display-none');
       document.getElementById('ok').classList.add('display-none');
       document.getElementById('overlay').classList.remove('display-none');
     }, 2000);
+});
+document.getElementById('scopri').addEventListener('click',
+  function() {
+    document.getElementById('scopri').classList.add('display-none');
+    document.getElementById('overlay').classList.add('display-none');
+    document.getElementById('transparent-overlay').classList.add('zindex99');
+    for (var i = 1; i <= 16; i++) {
+      document.getElementById('carta' + i).classList.add('rotate');
+  }
+  setTimeout(function(){
+    document.getElementById('carta1').classList.add('python');
+    document.getElementById('carta2').classList.add('python');
+    document.getElementById('carta3').classList.add('java');
+    document.getElementById('carta4').classList.add('java');
+    document.getElementById('carta5').classList.add('php');
+    document.getElementById('carta6').classList.add('php');
+    document.getElementById('carta7').classList.add('laravel');
+    document.getElementById('carta8').classList.add('laravel');
+    document.getElementById('carta9').classList.add('html5');
+    document.getElementById('carta10').classList.add('html5');
+    document.getElementById('carta11').classList.add('css3');
+    document.getElementById('carta12').classList.add('css3');
+    document.getElementById('carta13').classList.add('csharp');
+    document.getElementById('carta14').classList.add('csharp');
+    document.getElementById('carta15').classList.add('bootstrap');
+    document.getElementById('carta16').classList.add('bootstrap');
+  }, 600);
+  setTimeout(function(){
+    document.getElementById('overlay').classList.remove('display-none');
+  }, 5000);
+});
+
+document.getElementById('facile').addEventListener('click',
+  function() {
+    difficolta = 18400;
+  document.getElementById('facile').classList.add('active');
+  document.getElementById('difficile').classList.remove('active');
+  document.getElementById('medio').classList.remove('active');
+});
+document.getElementById('medio').addEventListener('click',
+  function() {
+    difficolta = 13400;
+    document.getElementById('medio').classList.add('active');
+    document.getElementById('facile').classList.remove('active');
+    document.getElementById('difficile').classList.remove('active');
+
+});
+document.getElementById('difficile').addEventListener('click',
+  function() {
+    difficolta = 11400;
+    document.getElementById('difficile').classList.add('active');
+    document.getElementById('medio').classList.remove('active');
+    document.getElementById('facile').classList.remove('active');
 });
