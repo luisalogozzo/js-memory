@@ -5,124 +5,289 @@
 }
 
 body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   min-width: 296px;
+  background-image: url(../img/desk.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#gioca {
-  font-size: 40px;
+
+#gioca,
+#ok {
+  font-size: 7vw;
+  cursor: pointer;
+  width: 30vw;
+  background-color: rgba(100, 200, 100, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px black;
+  margin-top: 5vh;
 }
 
 .carta {
-  border: 1px solid #1E7CCE;
-  border-radius: 5px;
   width: 128px;
   height: 174px;
   margin: 10px;
   cursor: pointer;
   background-image: url(../img/backface.JPG);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  perspective: 1000px;
   transition: transform 2s;
+  /* border-radius: 7px; */
 }
 .rotate {
   transform: rotateY(180deg);
 }
 
 #carta1 {
-  position: absolute;
   top: 0;
   left: 0;
 }
 #carta2 {
-  position: absolute;
-  top: 100%;
-  left: 100%;
+  top: 0%;
+  left: 25%;
 }
-
+#carta3 {
+  top: 0;
+  left: 50%;
+}
+#carta4 {
+  top: 0%;
+  left: 75%;
+}
+#carta5 {
+  top: 25%;
+  left: 0;
+}
+#carta6 {
+  top: 25%;
+  left: 25%;
+}
+#carta7 {
+  top: 25%;
+  left: 50%;
+}
+#carta8 {
+  top: 25%;
+  left: 75%;
+}
+#carta9 {
+  top: 50%;
+  left: 0;
+}
+#carta10 {
+  top: 50%;
+  left: 25%;
+}
+#carta11 {
+  top: 50%;
+  left: 50%;
+}
+#carta12 {
+  top: 50%;
+  left: 75%;
+}
+#carta13 {
+  top: 75%;
+  left: 0;
+}
+#carta14 {
+  top: 75%;
+  left: 25%;
+}
+#carta15 {
+  top: 75%;
+  left: 50%;
+}
+#carta16 {
+  top: 75%;
+  left: 75%;
+}
 
 
 .carta.python {
   background-image: url(../img/Python.png);
+  background-color: white;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 .carta.java {
   background-image: url(../img/java.png);
+  background-color: white;
+  background-size: 65%;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 .carta.php {
   background-image: url(../img/php.png);
+  background-color: white;
+  background-size: 90%;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 .carta.laravel {
   background-image: url(../img/laravel.png);
+  background-color: white;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 .carta.html5 {
   background-image: url(../img/html5.png);
+  background-color: white;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 .carta.css3 {
   background-image: url(../img/css3.png);
+  background-color: white;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+  background-size: 74%;
+
 }
 .carta.csharp {
   background-image: url(../img/csharp.jpg);
+  background-color: white;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 .carta.bootstrap {
   background-image: url(../img/bootstrap.png);
+  background-color: white;
+  border: 2px solid #1E7CCE;
+  border-radius: 5px;
+
 }
 
-#container {
-  position: relative;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 592px;
+  height: 776px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.transparent-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.overlay #messaggio {
+  font-size: 8vw;
+  text-align: center;
+}
 .container-animation {
   animation-name: shuffle;
-  animation-duration: 2.5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
+  /* animation-fill-mode: forwards; */
 }
 
 @keyframes shuffle {
   0% {
+    position: absolute;
   }
-  50% {
+  17% {
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-
   100% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.container-animation-back {
+  animation-name: shuffle-back;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+@keyframes shuffle-back{
+  0% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  30% {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    transform: none;
+  }
+  80% {
+    position: absolute;
+  }
+  100% {
+    position: absolute;
   }
 }
 
-/* @keyframes shuffle {
-  0% {
-    transform: rotate(0deg) scale(1) skew(0deg);
-  }
-  45% {
-    transform: rotate(670deg) scale(0.05) skew(10deg);
-  }
-  55% {
-    transform: rotate(720deg) scale(0.05) skew(10deg);
-  }
-  100% {
-    transform: rotate(0deg) scale(1) skew(0deg);
-  }
-} */
 
+.position-inerhit {
+  position: static;
+}
 
 .unclickable {
-  z-index: -1;
+  z-index: -2;
 }
 
-.hidden {
+.transparent {
   opacity: 0;
   transition: 1s;
+}
+.display-none {
+  display: none;
 }
 
 .direction1 {
   flex-direction: row-reverse;
+}
+.direction2 {
+  flex-direction: column;
+}
+.direction3 {
+  flex-direction: column-reverse;
 }
 
 .order1 {
@@ -136,9 +301,6 @@ body {
 }
 .order4 {
   order: 4;
-}
-.order5 {
-  order: 5;
 }
 .order5 {
   order: 5;
@@ -178,8 +340,20 @@ body {
 }
 
 
-@media screen and (min-width:297px) and (max-width:592px) {
+@media screen and (max-width:592px) {
   #container {
-    width: 296px;
+    width: 100vw;
+    min-width: 296px;
+    height: calc(100vw * 174 / 128);
+    min-height: calc(296px * 174 / 128);
   }
+  .carta {
+    width: 22%;
+    height: 22%;
+    margin: 1.5%;
+  }
+}
+
+.zindex99 {
+  z-index: 99;
 }
