@@ -8,17 +8,89 @@ body {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   min-width: 296px;
-  background-color: #FBF9C9;
   background-image: url(https://www.elsetge.cat/myimg/f/34-345663_question-marks-wallpaper-cute-question-mark-background.png);
-
-  /* background-image: url(../img/desk.jpg);
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; */
+  background-repeat: no-repeat;
 }
 
+#coppia {
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+  color: rgb(70, 70, 70);
+  font-size: 4vw;
+  text-shadow: .2vw .2vw white;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  transition: 1s;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 0 auto;
+  z-index: 100;
+  min-width: 80vw;
+  max-width: calc((100vh * 128 / 174) + 20px);
+  height: 816px;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  border-radius: 15px;
+}
+.transparent-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.overlay #messaggio {
+  color: #DF6EA6;
+  text-shadow: 8px 5px 6px #4d658d, 8px 3px 6px #4d658d;
+  font-size: 6vw;
+  text-align: center;
+}
+
+.difficolta {
+  margin-top: 5vh;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.livello-diff {
+  width: 9vw;
+  padding: 0.5vw 0;
+  font-size: 2vw;
+  cursor: pointer;
+  background-color: rgba(77, 101, 141, 0.8);
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  text-shadow: 0.2vw 0.2vw black;
+  opacity: 0.5;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+
+}
+
+.active {
+  color: rgb(91, 200, 207);
+  background-color: rgba(251, 249, 201, 0.8);
+  border: 2px solid black;
+  opacity: 1;
+}
 
 #gioca,
 #ok,
@@ -32,46 +104,39 @@ body {
   color: white;
   text-shadow: 2px 2px black;
   margin-top: 5vh;
+  box-shadow: 7px 7px 18px 0px rgba(0,0,0,0.75);
+  border: .2vw solid #fbf9c9;
+
 }
 
-.difficolta {
-  margin-top: 5vh;
-  width: 50%;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 592px;
+  max-width: calc(100vh * 128 / 174);
+  height: 776px;
+  max-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
-
-.livello-diff {
-  width: 9vw;
-  padding: 0.5vw 0;
-  font-size: 2vw;
-  cursor: pointer;
-  background-color: rgba(77, 101, 141, 0.8);
-  border-radius: 5px;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px black;
-  opacity: 0.5;
-}
-
-.active {
-  background-color: rgba(251, 249, 201, 0.8);
-  font-size: 2.2vw;
-  border: 1px solid black;
-  opacity: 1;
-}
-
 .carta {
   width: 128px;
+  max-width: calc(23vh * 128 / 174);
   height: 174px;
-  margin: 10px;
+  max-height: 23vh;
+  margin: 0.7vh;
   cursor: pointer;
   background-image: url(../img/backface.JPG);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  transition: transform 2s;
-  /* border-radius: 7px; */
+  transition: transform 2s, opacity 1s;
+  border-radius: 6px;
+
 }
 .rotate {
   transform: rotateY(180deg);
@@ -142,13 +207,11 @@ body {
   left: 75%;
 }
 
-
 .carta.python {
   background-image: url(../img/Python.png);
   background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
-
 }
 .carta.java {
   background-image: url(../img/java.png);
@@ -156,7 +219,6 @@ body {
   background-size: 65%;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
-
 }
 .carta.php {
   background-image: url(../img/php.png);
@@ -164,21 +226,18 @@ body {
   background-size: 90%;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
-
 }
 .carta.laravel {
   background-image: url(../img/laravel.png);
   background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
-
 }
 .carta.html5 {
   background-image: url(../img/html5.png);
   background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
-
 }
 .carta.css3 {
   background-image: url(../img/css3.png);
@@ -186,14 +245,12 @@ body {
   border: 2px solid #1E7CCE;
   border-radius: 5px;
   background-size: 74%;
-
 }
 .carta.csharp {
   background-image: url(../img/csharp.jpg);
   background-color: white;
   border: 2px solid #1E7CCE;
   border-radius: 5px;
-
 }
 .carta.bootstrap {
   background-image: url(../img/bootstrap.png);
@@ -203,111 +260,12 @@ body {
 
 }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 592px;
-  height: 776px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-
-.overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  margin: 0 auto;
-  z-index: 100;
-  width: 70%;
-  height: calc(91% + 40px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
-  border-radius: 15px;
-}
-.transparent-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.overlay #messaggio {
-  color: #DF6EA6;
-  text-shadow: 8px 5px 6px #4d658d, 8px 3px 6px #4d658d;
-  font-size: 6vw;
-  text-align: center;
-}
-.container-animation {
-  animation-name: shuffle;
-  animation-duration: 8s;
-  animation-timing-function: linear;
-  /* animation-fill-mode: forwards; */
-}
-
-@keyframes shuffle {
-  0% {
-    position: absolute;
-  }
-  17% {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  100% {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-.container-animation-back {
-  animation-name: shuffle-back;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-}
-
-@keyframes shuffle-back{
-  0% {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  30% {
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    transform: none;
-  }
-  80% {
-    position: absolute;
-  }
-  100% {
-    position: absolute;
-  }
-}
-
-
-.position-inerhit {
-  position: static;
-}
-
 .unclickable {
   z-index: -2;
 }
-
+.zindex99 {
+  z-index: 99;
+}
 .transparent {
   opacity: 0;
   transition: 1s;
@@ -374,11 +332,66 @@ body {
 .order16 {
   order: 16;
 }
+.container-animation {
+  animation-name: shuffle;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+}
 
+@keyframes shuffle {
+  0% {
+    position: absolute;
+  }
+  17% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.container-animation-back {
+  animation-name: shuffle-back;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+@keyframes shuffle-back{
+  0% {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  30% {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    transform: none;
+  }
+  80% {
+    position: absolute;
+  }
+  100% {
+    position: absolute;
+  }
+}
 
 @media screen and (max-width:592px) {
+  .overlay {
+    width: 100%;
+    min-width: 336px;
+    height: calc((100vw * 174 / 128) + 20px);
+  }
+
   #container {
-    width: 100vw;
+    width: 100%;
     min-width: 296px;
     height: calc(100vw * 174 / 128);
     min-height: calc(296px * 174 / 128);
@@ -388,8 +401,33 @@ body {
     height: 22%;
     margin: 1.5%;
   }
+
+  .difficolta {
+    width: 75%;
+  }
+
+  .livello-diff {
+    font-size: 4vw;
+    width: 15vw;
+  }
+
+  #gioca, #ok, #scopri {
+    font-size: 8vw;
+    width: 40vw;
+  }
+
+
+  .overlay #messaggio {
+    font-size: 8vw;
+  }
 }
 
-.zindex99 {
-  z-index: 99;
+.overlay h2 {
+  opacity: 0.7;
+  position: absolute;
+  bottom: 0;
+  text-shadow: .2vw .2vw white;
+  line-height: 9vh;
+  font-size: 2.5vw;
+  font-style: italic;
 }
